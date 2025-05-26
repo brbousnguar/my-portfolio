@@ -38,82 +38,203 @@
       border-radius: 0.5rem;
       font-size: 0.9rem;
     }
+    .lang-toggle {
+      text-align: right;
+    }
+    .lang-toggle button {
+      margin: 0.2rem;
+      padding: 0.3rem 0.6rem;
+      background-color: #005792;
+      color: white;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+    .social {
+      margin-bottom: 2rem;
+    }
+    .social a {
+      margin-right: 1rem;
+      color: #005792;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .social a:hover {
+      text-decoration: underline;
+    }
   </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.getElementById(lang).classList.add('active');
+    }
+    window.onload = () => switchLang('en');
+  </script>
 </head>
 <body>
   <div class="container">
-    <h1>Brahim Bousnguar</h1>
-    <p><strong>Consultant SAP Commerce Cloud | Mulesoft Integrator</strong></p>
-
-    <div class="section">
-      <h2>Summary</h2>
-      <p>8 years of experience as a SAP Commerce Cloud consultant and recent Mulesoft integrator. Strong background in Java, e-commerce architectures, and cloud-native systems.</p>
+    <div class="lang-toggle">
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="switchLang('fr')">FR</button>
     </div>
 
-    <div class="section">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> Java 17, JavaScript, HTML, CSS, Shell, Velocity</li>
-        <li><strong>Frameworks:</strong> Spring Boot, Spring Security, Spring Integration</li>
-        <li><strong>DevOps:</strong> Jenkins, Docker, Kubernetes</li>
-        <li><strong>Databases:</strong> MySQL, SAP Hana, PostgreSQL</li>
-        <li><strong>Tools:</strong> IntelliJ, STS, VS Code, Tomcat, Kibana</li>
-      </ul>
+    <div class="social">
+      <a href="https://github.com/brbousnguar" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/brahim-bousnguar/" target="_blank">LinkedIn</a>
     </div>
 
-    <div class="section">
-      <h2>Certifications</h2>
-      <ul>
-        <li>SAP Certified Development Professional - SAP Commerce Cloud Developer (2023)</li>
-        <li>SAP Certified Associate - SAP Hybris Commerce Business Analyst 6.3 (2018)</li>
-      </ul>
+    <div id="en" class="lang-content">
+      <h1>Brahim Bousnguar</h1>
+      <p><strong>Consultant SAP Commerce Cloud | Mulesoft Integrator</strong></p>
+
+      <div class="section">
+        <h2>Summary</h2>
+        <p>8 years of experience as a SAP Commerce Cloud consultant and recent Mulesoft integrator. Strong background in Java, e-commerce architectures, and cloud-native systems.</p>
+      </div>
+
+      <div class="section">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> Java 17, JavaScript, HTML, CSS, Shell, Velocity</li>
+          <li><strong>Frameworks:</strong> Spring Boot, Spring Security, Spring Integration</li>
+          <li><strong>DevOps:</strong> Jenkins, Docker, Kubernetes</li>
+          <li><strong>Databases:</strong> MySQL, SAP Hana, PostgreSQL</li>
+          <li><strong>Tools:</strong> IntelliJ, STS, VS Code, Tomcat, Kibana</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>SAP Certified Development Professional - SAP Commerce Cloud Developer (2023)</li>
+          <li>SAP Certified Associate - SAP Hybris Commerce Business Analyst 6.3 (2018)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Professional Experience</h2>
+        <h3>Miele (01/2022 – Present)</h3>
+        <p>Optimization of OCC APIs, microservices via SAP BTP Kyma, cloud-native migration (CCv2)</p>
+        <ul>
+          <li>Developed microservices for scalable architecture</li>
+          <li>Implemented CI/CD with Jenkins</li>
+          <li>Led agile ceremonies and sprint delivery</li>
+        </ul>
+
+        <h3>BYK (08/2018 – 12/2021)</h3>
+        <p>Tech Lead on B2B multi-country SAP Commerce Cloud platform migration</p>
+        <ul>
+          <li>Led migration from Hybris 6.7 to 2011 CCv2</li>
+          <li>Supported junior devs and handled SEO optimization</li>
+        </ul>
+
+        <h3>SEB Group (07/2016 – 07/2018)</h3>
+        <p>Integrated brands like All Clad, Seb.fr, Krups into SEB Core Hybris</p>
+        <ul>
+          <li>Tax engine integration (Vertex)</li>
+          <li>Salesforce SSO setup (OAuth2)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Brake.fr:</strong> Internship, Hybris, Impex, CMS, PIM</li>
+          <li><strong>Roch Bobois:</strong> Mulesoft AnyPoint Platform Integration</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Tags</h2>
+        <span class="tag">#SAP_COMMERCE</span>
+        <span class="tag">#ECOMMERCE</span>
+        <span class="tag">#SPRING</span>
+        <span class="tag">#AGILE</span>
+        <span class="tag">#DEVOPS</span>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <p>2015 - State Engineer in Computer Science & BI, INSEA Rabat</p>
+      </div>
     </div>
 
-    <div class="section">
-      <h2>Professional Experience</h2>
-      <h3>Miele (01/2022 – Present)</h3>
-      <p>Optimization of OCC APIs, microservices via SAP BTP Kyma, cloud-native migration (CCv2)</p>
-      <ul>
-        <li>Developed microservices for scalable architecture</li>
-        <li>Implemented CI/CD with Jenkins</li>
-        <li>Led agile ceremonies and sprint delivery</li>
-      </ul>
+    <div id="fr" class="lang-content">
+      <h1>Brahim Bousnguar</h1>
+      <p><strong>Consultant SAP Commerce Cloud | Intégrateur Mulesoft</strong></p>
 
-      <h3>BYK (08/2018 – 12/2021)</h3>
-      <p>Tech Lead on B2B multi-country SAP Commerce Cloud platform migration</p>
-      <ul>
-        <li>Led migration from Hybris 6.7 to 2011 CCv2</li>
-        <li>Supported junior devs and handled SEO optimization</li>
-      </ul>
+      <div class="section">
+        <h2>Résumé</h2>
+        <p>8 ans d'expérience en tant que consultant SAP Commerce Cloud et intégrateur Mulesoft récent. Solide expérience en Java, architectures e-commerce et systèmes cloud-native.</p>
+      </div>
 
-      <h3>SEB Group (07/2016 – 07/2018)</h3>
-      <p>Integrated brands like All Clad, Seb.fr, Krups into SEB Core Hybris</p>
-      <ul>
-        <li>Tax engine integration (Vertex)</li>
-        <li>Salesforce SSO setup (OAuth2)</li>
-      </ul>
-    </div>
+      <div class="section">
+        <h2>Compétences Techniques</h2>
+        <ul>
+          <li><strong>Langages :</strong> Java 17, JavaScript, HTML, CSS, Shell, Velocity</li>
+          <li><strong>Frameworks :</strong> Spring Boot, Spring Security, Spring Integration</li>
+          <li><strong>DevOps :</strong> Jenkins, Docker, Kubernetes</li>
+          <li><strong>Bases de données :</strong> MySQL, SAP Hana, PostgreSQL</li>
+          <li><strong>Outils :</strong> IntelliJ, STS, VS Code, Tomcat, Kibana</li>
+        </ul>
+      </div>
 
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Brake.fr:</strong> Internship, Hybris, Impex, CMS, PIM</li>
-        <li><strong>Roch Bobois:</strong> Mulesoft AnyPoint Platform Integration</li>
-      </ul>
-    </div>
+      <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Certifié SAP Commerce Cloud Developer (2023)</li>
+          <li>Certifié SAP Hybris Business Analyst 6.3 (2018)</li>
+        </ul>
+      </div>
 
-    <div class="section">
-      <h2>Tags</h2>
-      <span class="tag">#SAP_COMMERCE</span>
-      <span class="tag">#ECOMMERCE</span>
-      <span class="tag">#SPRING</span>
-      <span class="tag">#AGILE</span>
-      <span class="tag">#DEVOPS</span>
-    </div>
+      <div class="section">
+        <h2>Expériences Professionnelles</h2>
+        <h3>Miele (01/2022 – Aujourd'hui)</h3>
+        <p>Optimisation des APIs OCC, microservices avec SAP BTP Kyma, migration cloud-native (CCv2)</p>
+        <ul>
+          <li>Développement de microservices pour une architecture évolutive</li>
+          <li>Mise en place de pipelines CI/CD avec Jenkins</li>
+          <li>Participation aux cérémonies agiles</li>
+        </ul>
 
-    <div class="section">
-      <h2>Education</h2>
-      <p>2015 - Ingénieur d’État en Informatique & Business Intelligence, INSEA Rabat</p>
+        <h3>BYK (08/2018 – 12/2021)</h3>
+        <p>Tech Lead pour plateforme SAP Commerce Cloud multi-pays B2B</p>
+        <ul>
+          <li>Migration de Hybris 6.7 à Commerce 2011 CCv2</li>
+          <li>Support aux développeurs juniors et optimisation SEO</li>
+        </ul>
+
+        <h3>SEB Group (07/2016 – 07/2018)</h3>
+        <p>Intégration de All Clad, Seb.fr, Krups dans SEB Core Hybris</p>
+        <ul>
+          <li>Intégration de Vertex (calcul taxes)</li>
+          <li>Mise en place SSO Salesforce (OAuth2)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Projets</h2>
+        <ul>
+          <li><strong>Brake.fr :</strong> Stage, Hybris, Impex, CMS, PIM</li>
+          <li><strong>Roch Bobois :</strong> Intégration via Mulesoft AnyPoint Platform</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Tags</h2>
+        <span class="tag">#SAP_COMMERCE</span>
+        <span class="tag">#ECOMMERCE</span>
+        <span class="tag">#SPRING</span>
+        <span class="tag">#AGILE</span>
+        <span class="tag">#DEVOPS</span>
+      </div>
+
+      <div class="section">
+        <h2>Formation</h2>
+        <p>2015 - Ingénieur d'État en Informatique & BI, INSEA Rabat</p>
+      </div>
     </div>
   </div>
 </body>
