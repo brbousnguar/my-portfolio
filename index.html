@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brahim Bousnguar | SAP & Mulesoft Consultant</title>
+  <meta name="description" content="Brahim Bousnguar - SAP Commerce Cloud & Mulesoft Consultant Portfolio">
+  <meta name="keywords" content="SAP Commerce Cloud, Mulesoft, Java, Consultant, Portfolio, E-commerce, Integration">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -50,6 +53,9 @@
       border-radius: 0.3rem;
       cursor: pointer;
     }
+    .lang-toggle button.active {
+      background-color: #003f5c;
+    }
     .lang-content { display: none; }
     .lang-content.active { display: block; }
     .social {
@@ -64,14 +70,20 @@
     .social a:hover {
       text-decoration: underline;
     }
+    @media (max-width: 600px) {
+      .container { padding: 1rem; }
+      h1 { font-size: 1.5rem; }
+      h2 { font-size: 1.2rem; }
+    }
   </style>
   <script>
     function switchLang(lang) {
       document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-toggle button').forEach(btn => btn.classList.remove('active'));
       const selected = document.getElementById(lang);
-      if (selected) {
-        selected.classList.add('active');
-      }
+      if (selected) selected.classList.add('active');
+      const btn = document.querySelector(`.lang-toggle button[onclick*="${lang}"]`);
+      if (btn) btn.classList.add('active');
     }
     window.onload = function () {
       switchLang('en');
@@ -80,9 +92,12 @@
 </head>
 <body>
   <div class="container">
+    <div style="text-align:right; margin-bottom:1rem;">
+      <a href="Brahim_Bousnguar_CV.pdf" target="_blank" style="color:#005792; font-weight:bold;">Download CV (PDF)</a>
+    </div>
     <div class="lang-toggle">
-      <button onclick="switchLang('en')">EN</button>
-      <button onclick="switchLang('fr')">FR</button>
+      <button onclick="switchLang('en')" aria-label="Switch to English">EN</button>
+      <button onclick="switchLang('fr')" aria-label="Switch to French">FR</button>
     </div>
 
     <div class="social">
@@ -151,14 +166,19 @@
           <li>Tax engine integration (Vertex)</li>
           <li>Salesforce SSO setup (OAuth2)</li>
         </ul>
+      </div>
 
-
-
-<div class="section">
-  <h2>Projects</h2>
+      <div class="section">
+        <h2>Projects</h2>
         <ul>
-          <li><strong>Brake.fr:</strong> Internship, Hybris, Impex, CMS, PIM</li>
-          <li><strong>Roch Bobois:</strong> Mulesoft AnyPoint Platform Integration</li>
+          <li>
+            <strong>Brake.fr:</strong> Internship, Hybris, Impex, CMS, PIM<br>
+            <em>Developed product import flows and CMS customizations.</em>
+          </li>
+          <li>
+            <strong>Roch Bobois:</strong> Mulesoft AnyPoint Platform Integration<br>
+            <em>Designed and delivered reusable APIs for business process integration.</em>
+          </li>
         </ul>
       </div>
 
@@ -175,10 +195,15 @@
         <h2>Education</h2>
         <p>2015 - State Engineer in Computer Science & BI, INSEA Rabat</p>
       </div>
+
+      <div class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:b.bousnguar@gmail.com">b.bousnguar@gmail.com</a></p>
+      </div>
     </div>
-</div>
+
     <div id="fr" class="lang-content">
-      <h1>Brahim Bousnguar</h1>
+      <h1>Brahim BOUSNGUAR</h1>
       <p><strong>Consultant SAP Commerce Cloud | Intégrateur Mulesoft</strong></p>
 
       <div class="section">
@@ -209,13 +234,13 @@
         <h2>Expériences Professionnelles</h2>
 
         <h3>Roch Bobois (01/2025 – Aujourd'hui)</h3>
-<p>Conception et intégration d'APIs avec la plateforme Anypoint pour le client Roche Bobois.</p>
-<ul>
-  <li>Conception et implémentation d'APIs avec Anypoint Studio et Code Builder</li>
-  <li>Développement de transformations de données avec DataWeave</li>
-  <li>Intégration de systèmes tiers via la plateforme Mulesoft</li>
-  <li>Participation à la définition des bonnes pratiques d'architecture et de développement d'APIs</li>
-</ul>
+        <p>Conception et intégration d'APIs avec la plateforme Anypoint pour le client Roche Bobois.</p>
+        <ul>
+          <li>Conception et implémentation d'APIs avec Anypoint Studio et Code Builder</li>
+          <li>Développement de transformations de données avec DataWeave</li>
+          <li>Intégration de systèmes tiers via la plateforme Mulesoft</li>
+          <li>Participation à la définition des bonnes pratiques d'architecture et de développement d'APIs</li>
+        </ul>
         <h3>Miele (01/2022 – 12/2024)</h3>
         <p>Optimisation des APIs OCC, microservices avec SAP BTP Kyma, migration cloud-native (CCv2)</p>
         <ul>
@@ -237,14 +262,19 @@
           <li>Intégration de Vertex (calcul taxes)</li>
           <li>Mise en place SSO Salesforce (OAuth2)</li>
         </ul>
+      </div>
 
-
-
-<div class="section">
-  <h2>Projets</h2>
+      <div class="section">
+        <h2>Projets</h2>
         <ul>
-          <li><strong>Brake.fr :</strong> Stage, Hybris, Impex, CMS, PIM</li>
-          <li><strong>Roch Bobois :</strong> Intégration via Mulesoft AnyPoint Platform</li>
+          <li>
+            <strong>Brake.fr :</strong> Stage, Hybris, Impex, CMS, PIM<br>
+            <em>Développement de flux d'import produits et personnalisations CMS.</em>
+          </li>
+          <li>
+            <strong>Roch Bobois :</strong> Intégration via Mulesoft AnyPoint Platform<br>
+            <em>Conception et livraison d'APIs réutilisables pour l'intégration des processus métier.</em>
+          </li>
         </ul>
       </div>
 
@@ -260,6 +290,11 @@
       <div class="section">
         <h2>Formation</h2>
         <p>2015 - Ingénieur d'État en Informatique & BI, INSEA Rabat</p>
+      </div>
+
+      <div class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:b.bousnguar@gmail.com">b.bousnguar@gmail.com</a></p>
       </div>
     </div>
   </div>
