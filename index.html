@@ -68,9 +68,14 @@
   <script>
     function switchLang(lang) {
       document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-      document.getElementById(lang).classList.add('active');
+      const selected = document.getElementById(lang);
+      if (selected) {
+        selected.classList.add('active');
+      }
     }
-    window.onload = () => switchLang('en');
+    window.onload = function () {
+      switchLang('en');
+    };
   </script>
 </head>
 <body>
@@ -171,7 +176,7 @@
         <p>2015 - State Engineer in Computer Science & BI, INSEA Rabat</p>
       </div>
     </div>
-
+</div>
     <div id="fr" class="lang-content">
       <h1>Brahim Bousnguar</h1>
       <p><strong>Consultant SAP Commerce Cloud | Intégrateur Mulesoft</strong></p>
