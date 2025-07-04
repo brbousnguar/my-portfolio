@@ -1,41 +1,34 @@
 ---
-layout: splash
+layout: single
 permalink: /
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/splash-bg.jpg
-  actions:
-    - label: "View My Work"
-      url: "/portfolio/"
-  caption: "Welcome to my portfolio"
-excerpt: "Software Developer passionate about creating amazing digital experiences"
-intro: 
-  - excerpt: 'Welcome to my portfolio website. Here you will find information about my projects, skills, and professional journey. Feel free to explore and get in touch!'
-
-feature_row:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-    title: "Projects"
-    excerpt: "Check out some of my recent work and projects I've been involved in."
-    url: "/portfolio/"
-    btn_label: "View Projects"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "About Me"
-    excerpt: "Learn more about my background, skills, and experience."
-    url: "/about/"
-    btn_label: "Learn More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Contact"
-    excerpt: "Interested in working together? Let's get in touch!"
-    url: "/contact/"
-    btn_label: "Get in Touch"
-    btn_class: "btn--primary"      
+author_profile: true
 ---
 
-{% include feature_row id="intro" type="center" %}
+# Welcome to My Portfolio
 
-{% include feature_row %}
+I'm a passionate software developer with experience in web development, programming, and creating digital solutions. Welcome to my portfolio website where you can learn more about my work and connect with me.
+
+## What I Do
+
+- **Web Development**: Creating responsive and user-friendly websites
+- **Software Engineering**: Building robust applications and systems
+- **Problem Solving**: Tackling complex technical challenges
+- **Continuous Learning**: Staying current with new technologies and best practices
+
+## Featured Sections
+
+### 📁 [Portfolio](/portfolio/)
+Check out my latest projects and case studies showcasing my technical skills and creativity.
+
+### 📝 [Blog Posts](/posts/)
+Read my thoughts on technology, development practices, and industry trends.
+
+### 👋 [About Me](/about/)
+Learn more about my background, experience, and what drives my passion for technology.
+
+### 📞 [Contact](/contact/)
+Interested in working together? Let's connect and discuss opportunities.
+
+---
+
+*Thanks for visiting! Feel free to explore and don't hesitate to reach out.*
