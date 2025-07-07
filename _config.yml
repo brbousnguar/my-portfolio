@@ -19,7 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "My Portfolio"
-name: "Your Name"
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my portfolio website. Here you'll find information about my projects,
@@ -29,7 +28,11 @@ url: "https://brbousngurar.github.io/my-portfolio" # the base hostname & protoco
 twitter_username: your_twitter
 github_username: brbousngurar
 
-# Site Author
+# Build settings
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "default"
+
+# Site Author (required for Minimal Mistakes)
 author:
   name: "Your Name"
   bio: "Software Developer passionate about creating amazing web experiences"
@@ -39,107 +42,26 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/brbousngurar"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/your_twitter"
 
-# Site Footer
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/brbousngurar"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/your_twitter"
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Conversion
+# Markdown Processing
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# Plugins (previously gems:)
-plugins:
-  - jekyll-remote-theme
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 5
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-remote-theme
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-# Defaults
+# Defaults (required for proper layout)
 defaults:
   # _posts
   - scope:
@@ -149,7 +71,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
   # _pages
@@ -160,9 +82,14 @@ defaults:
       layout: single
       author_profile: true
 
-# Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+plugins:
+  - jekyll-remote-theme
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.

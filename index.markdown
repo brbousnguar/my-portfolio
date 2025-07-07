@@ -1,6 +1,5 @@
 ---
 layout: single
-permalink: /
 author_profile: true
 ---
 
@@ -15,20 +14,12 @@ I'm a passionate software developer with experience in web development, programm
 - **Problem Solving**: Tackling complex technical challenges
 - **Continuous Learning**: Staying current with new technologies and best practices
 
-## Featured Sections
+## Recent Posts
 
-### 📁 [Portfolio](/portfolio/)
-Check out my latest projects and case studies showcasing my technical skills and creativity.
+{% for post in site.posts limit:3 %}
+- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
+{% endfor %}
 
-### 📝 [Blog Posts](/posts/)
-Read my thoughts on technology, development practices, and industry trends.
+## Get In Touch
 
-### 👋 [About Me](/about/)
-Learn more about my background, experience, and what drives my passion for technology.
-
-### 📞 [Contact](/contact/)
-Interested in working together? Let's connect and discuss opportunities.
-
----
-
-*Thanks for visiting! Feel free to explore and don't hesitate to reach out.*
+Feel free to explore my work and don't hesitate to reach out if you'd like to connect or collaborate on a project!

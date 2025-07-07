@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "Welcome to My Portfolio!"
-date:   2025-07-04 05:36:30 +0000
+title: "Welcome to My Portfolio!"
+date: 2025-07-04 05:36:30 +0000
 categories: portfolio update
 author_profile: true
 ---
@@ -45,4 +45,4 @@ I'll be regularly updating this site with new projects, blog posts, and improvem
 - Industry insights and observations
 - Open source contributions
 
-Thanks for visiting, and feel free to [get in touch](/contact/) if you'd like to connect!
+Thanks for visiting, and feel free to get in touch if you'd like to connect!

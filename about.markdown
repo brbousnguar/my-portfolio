@@ -26,4 +26,4 @@ I believe in continuous learning and staying up-to-date with the latest industry
 
 ---
 
-*Want to know more? Feel free to [get in touch](/contact/) or check out my [projects](/portfolio/)!*
+*Want to know more? Feel free to get in touch or check out my projects!*
